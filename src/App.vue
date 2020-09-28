@@ -4,57 +4,46 @@
       app
       color="primary"
       dark
+      prominent
+      flat
+      src="https://picsum.photos/id/171/1920/1080?random"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-toolbar-title>
+        <h1>{{ name }}</h1>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <HelloWorld />
     </v-main>
+    <v-footer dark>
+      <v-spacer></v-spacer>
+      <a
+        v-for="contact in contacts"
+        :href="contact.content"
+        :key="contact.icon"
+        style="text-decoration: none"
+        class="mx-3"
+      >
+        <v-icon x-large>{{ contact.icon }}</v-icon>
+      </a>
+      <v-spacer></v-spacer>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from "./components/HelloWorld";
+import resumeData from "./resume.js";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     HelloWorld,
   },
 
-  data: () => ({
-    //
-  }),
+  data: () => resumeData,
 };
 </script>
