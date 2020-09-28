@@ -47,5 +47,10 @@
   ],
   "transpileDependencies": [
     "vuetify"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "@vue/cli-plugin-babel/preset"
+    ]
+  }
 }
