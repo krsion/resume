@@ -2,7 +2,6 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
       dark
       prominent
       flat
@@ -15,7 +14,7 @@
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
-      <HelloWorld />
+      <Resume />
     </v-main>
     <v-footer dark>
       <v-spacer></v-spacer>
@@ -34,14 +33,14 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Resume from "./components/Resume";
 import resumeData from "./resume.js";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld,
+    Resume,
   },
 
   data: () => resumeData,
