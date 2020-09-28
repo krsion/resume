@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="content">
     <h1>Experience</h1>
     <v-card tile outlined class="my-2" v-for="job in jobs" :key="job.title">
       <v-card-title
@@ -55,6 +55,13 @@
     </v-card>
   </v-container>
 </template>
+
+<style>
+#content {
+  margin: auto;
+  max-width: 600px;
+}
+</style>
 
 <script>
 import resumeData from "../resume.js";
