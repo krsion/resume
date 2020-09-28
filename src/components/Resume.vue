@@ -61,6 +61,10 @@
   margin: auto;
   max-width: 600px;
 }
+.v-card__text,
+.v-card__title {
+  word-break: normal !important;
+}
 </style>
 
 <script>
