@@ -37,7 +37,7 @@ import resumeData from "./resume.js";
 
 export default {
   name: "App",
-
+  title: resumeData.name,
   components: {
     Resume,
   },
