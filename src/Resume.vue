@@ -69,7 +69,7 @@
 </style>
 
 <script>
-import resumeData from "../resume.js";
+import resumeData from "./resumeData.js";
 export default {
   name: "Resume",
   data: () => resumeData,

@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify';
+import Vuetify from 'vuetify/lib';
 import VuePageTitle from 'vue-page-title'
 
-Vue.use(VuePageTitle, {
-})
+Vue.use(VuePageTitle, {});
+Vue.use(Vuetify);
 
 Vue.config.productionTip = false
 
 new Vue({
-  vuetify,
+  vuetify: new Vuetify({}),
   render: h => h(App)
 }).$mount('#app')

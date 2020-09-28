@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import Resume from "./components/Resume";
-import resumeData from "./resume.js";
+import Resume from "./Resume.vue";
+import resumeData from "./resumeData.js";
 
 export default {
   name: "App",
