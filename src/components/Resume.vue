@@ -2,9 +2,10 @@
   <v-container id="content">
     <h1>Experience</h1>
     <v-card tile outlined class="my-2" v-for="job in jobs" :key="job.title">
-      <v-card-title
-        ><strong>{{ job.title }},&nbsp;</strong> {{ job.company }}</v-card-title
-      >
+      <v-card-title>
+        <strong>{{ job.title }}{{ ",\xa0" }} </strong>
+        {{ job.company }}
+      </v-card-title>
       <v-card-subtitle>
         {{ job.from }}<span v-if="job.to"> – </span>{{ job.to }} ({{
           job.time
